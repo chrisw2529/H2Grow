@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="searchId" type="id" />
+    <item name="listId" type="id" />
+    <item name="space" type="id" />
+    <item name="sortId" type="id" />
+</resources>

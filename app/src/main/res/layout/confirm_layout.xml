@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_window"
+    android:layout_height="250dp"
+    android:layout_width="300dp"
+    android:padding="25dp"
+    android:orientation="vertical"
+    android:background="@color/grey">
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="87dp"
+        android:layout_gravity="center"
+        android:text="Are you sure you want to delete this plant?"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/popup_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/popup_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

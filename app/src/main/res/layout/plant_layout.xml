@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/plantDetailTB"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--style="@style/HeaderBar"-->
+        <!--app:theme="@style/ActionBarThemeOverlay"-->
+        <!--app:popupTheme="@style/ActionBarPopupThemeOverlay"-->
+        <!--android:elevation="4dp"-->
+
+        <!--/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp">
+
+            <ImageButton
+                android:id="@+id/detail_back_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_button"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:onClick="goBack"
+                android:adjustViewBounds="true"
+                />
+            <ImageButton
+                android:id="@+id/detail_edit_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/edit_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:onClick="editPlant"
+                android:adjustViewBounds="true"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/detail_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="14"
+            android:layout_margin="20dp"
+            android:src="@drawable/temp_plant"
+
+            />
+        <TextView
+            android:id="@+id/detail_plant_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:text="@string/detail_plant_name"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="Should Be Watered:"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/detail_watering_interval"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:text="Every Three Days"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/detail_needs_2b_watered_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="Needs To Be Watered:"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/detail_needs_2b_watered"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+        <Button
+            android:id="@+id/waterPlant"
+            android:layout_width="170dp"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_gravity="center"
+            android:text="water"
+            android:layout_margin="40dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:onClick="water"
+            />
+    </LinearLayout>
+</LinearLayout>

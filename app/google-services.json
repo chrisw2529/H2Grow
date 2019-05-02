@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "372750798904",
+    "firebase_url": "https://h2grow-b1f4e.firebaseio.com",
+    "project_id": "h2grow-b1f4e",
+    "storage_bucket": "h2grow-b1f4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372750798904:android:6c21e3e90db2aab6",
+        "android_client_info": {
+          "package_name": "edu.wwu.h20grow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372750798904-69hbpmm9h0jitao7nf5nirbvcs6p5su0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.wwu.h20grow",
+            "certificate_hash": "7dff74bc59fc7477c9008e34fa0783fb169589c1"
+          }
+        },
+        {
+          "client_id": "372750798904-d72g5shfb0qbt26csbcfofc156f9vl0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkhPDBOPVs5wg1LsMd8dQZ554WT5rgVKI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372750798904-d72g5shfb0qbt26csbcfofc156f9vl0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

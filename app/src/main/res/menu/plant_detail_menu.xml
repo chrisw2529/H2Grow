@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.wwu.h20grow.PlantDetailActivity">
+    <item
+        android:id="@+id/editPlantTB"
+        android:orderInCategory="100"
+        android:title="@string/editPlant"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/relative_layout_add">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:onClick="goBack"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_title"
+            android:textSize="25sp" />
+
+        <!--User's name of plant-->
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCommonName"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/textName"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:minWidth="200dp"
+            android:singleLine="true"
+            android:theme="@style/EditTextTheme" />
+
+        <TextView
+        android:id="@+id/NameRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/editName"
+        android:layout_below="@id/textCommonName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/required"
+        android:textSize="15sp"
+        android:textColor="@color/red"
+        />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editName"
+            android:layout_below="@+id/textCommonName"
+            android:layout_toRightOf="@id/NameRequired"
+
+            android:text="@string/add_plant_name"
+            android:textSize="15sp" />
+
+        <!--Scientific Name-->
+        <AutoCompleteTextView
+            android:id="@+id/editSci"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editName"
+            android:layout_below="@+id/picButton"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/textSci"
+            android:completionThreshold="1"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:theme="@style/EditTextTheme">
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+        <TextView
+            android:id="@+id/textSci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/editSci"
+            android:layout_alignLeft="@id/textName"
+            android:layout_marginBottom="10dp"
+            android:text="@string/add_plant_type"
+            android:textSize="15sp" />
+
+        <!--Common Name-->
+        <TextView
+            android:id="@+id/textCommonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textSci"
+            android:layout_below="@id/editSci"
+            android:layout_marginBottom="10dp"
+            android:text="@string/add_plant_comm"
+            android:textSize="15sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/editCommonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textCommonName"
+            android:layout_alignLeft="@id/editName"
+            android:layout_below="@id/textSci"
+            android:layout_toRightOf="@id/textCommonName"
+            android:completionThreshold="1"
+            android:lines="1"
+            android:maxLines="1"
+            android:minWidth="200dp"
+            android:singleLine="true"
+            android:theme="@style/EditTextTheme" />
+
+        <!--Picture-->
+        <!--<TextView-->
+        <!--android:id="@+id/textPicture"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/textWater"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:text="@string/add_pic"-->
+        <!--android:textSize="25sp" />-->
+
+        <ImageView
+            android:id="@+id/plantImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/textTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/temp_plant" />
+
+        <Button
+            android:id="@+id/picButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/galleryButton"
+            android:layout_alignLeft="@id/plantImage"
+            android:layout_below="@id/plantImage"
+            android:onClick="addPic"
+            android:text="Add photo" />
+
+        <Button
+            android:id="@+id/galleryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/plantImage"
+            android:layout_below="@id/plantImage"
+            android:layout_toRightOf="@id/picButton"
+            android:onClick="openGallery"
+            android:text="Import photo" />
+
+        <!--Water interval-->
+        <TextView
+            android:id="@+id/required"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editWater"
+
+            android:layout_below="@id/textName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/required"
+            android:textSize="15sp"
+            android:textColor="@color/red"
+            />
+
+        <TextView
+            android:id="@+id/textWater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editWater"
+            android:layout_below="@id/textName"
+            android:layout_toRightOf="@id/required"
+            android:layout_marginRight="10dp"
+            android:text="@string/add_water"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editWater"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editName"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/textWater"
+            android:inputType="number"
+            android:maxLength="2"
+            android:theme="@style/EditTextTheme" />
+
+        <TextView
+            android:id="@+id/waterSuggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editWater"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="10dp"
+            android:text="Suggested watering of every "
+          />
+
+        <TextView
+            android:id="@+id/newWaterSuggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editWater"
+            android:layout_toRightOf="@id/waterSuggestion" />
+        <TextView
+            android:id="@+id/requiredFields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/waterSuggestion"
+            android:layout_centerHorizontal="true"
+            android:text="@string/requiredField"
+            android:textColor="@color/red"
+             />
+
+
+        <Button
+            android:id="@+id/add_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/requiredFields"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:onClick="addPlant"
+            android:text="Add plant" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_update"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/red"
+            android:onClick="deletePlant"
+            android:text="Delete"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
